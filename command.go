@@ -8,11 +8,11 @@ type Command struct {
 
 var empty = []string{}
 
-func (c Command) Flag(names ...string) []string {
+func (c Command) Flag(names ...string) ([]string, bool) {
 	for _, name := range names {
 		if v, ok := c.Flags[name]; ok {
-			return v
+			return v, true
 		}
 	}
-	return empty
+	return empty, false
 }

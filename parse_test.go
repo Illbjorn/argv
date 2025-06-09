@@ -74,7 +74,7 @@ func testParse(z zest.Zester, name string, input []string, want Command, wantErr
 
 	// Compare flags
 	for name, values := range want.Flags {
-		gotValues := got.Flag(name)
+		gotValues, _ := got.Flag(name)
 		// Confirm we got the expected number of flag values
 		z.Assert(
 			len(gotValues) == len(values),
