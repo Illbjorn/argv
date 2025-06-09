@@ -3,7 +3,7 @@ package argv
 import (
 	"testing"
 
-	"github.com/illbjorn/vsx/internal/zest"
+	"github.com/illbjorn/zest"
 )
 
 func TestTokenize(t *testing.T) {
